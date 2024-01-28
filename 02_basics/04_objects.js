@@ -35,7 +35,7 @@ const obj2 = {3:"a" , 4:"b"}
 //using spread operator
 
 const obj3 = {...obj1 , ...obj2}
-console.log(obj3);
+// console.log(obj3);
 
 const users = [
     {
@@ -53,10 +53,38 @@ const users = [
 ]
 
 users[1].email
-console.log(tinderUser);
-console.log(Object.keys(tinderUser))
-console.log(Object.values(tinderUser))
-console.log(Object.entries(tinderUser))
+// console.log(tinderUser);
+// console.log(Object.keys(tinderUser))
+// console.log(Object.values(tinderUser))
+// console.log(Object.entries(tinderUser))
 
-console.log(tinderUser.hasOwnProperty('isLoggedIn'))
+// console.log(tinderUser.hasOwnProperty('isLoggedIn'))
 
+// Object de-structure
+
+const course ={
+    coursename: "js in hindi",
+    price:"999",
+    courseInstructure :"hitesh"
+}
+
+// course.courseInstructure
+
+const {courseInstructure : instructor} = course
+
+// console.log(courseInstructure)
+console.log(instructor)
+
+
+//Api
+// {
+//     "name":ayush",
+//     "coursename":"js in hindi",
+//     "price":"free"
+// }
+
+// [
+//     {},
+//     {},
+//     {}
+// ]
