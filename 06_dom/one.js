@@ -20,3 +20,28 @@ console.log(document.querySelector('h2'))
 console.log(document.querySelector('input[type="password"]'))
 
 console.log(document.querySelector('ul'))
+
+const myul = document.querySelector('ul')
+const turnGreen = myul.querySelector('li');
+
+turnGreen.style.backgroundColor="green"
+
+
+console.log(document.querySelectorAll("li"))
+
+const tempList = document.querySelectorAll("li")
+console.log(tempList)
+
+const myH1 = document.querySelectorAll('h1')
+console.log(myH1)
+
+myH1[0].style.color = 'green'
+
+tempList.forEach(function(l){
+    l.style.backgroundColor = "green"
+})
+
+const myConvertedArray = Array.from(tempList)
+myConvertedArray.forEach(function(li){
+    li.style.color = 'red'
+})
