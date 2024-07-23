@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XMLHttpRequest</title>
+</head>
+<body style="background-color: #212121; color: white;">
+    // XMLHttpRequest - https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/readyState
+
+    <script>
+        const reqURL = "https://api.github.com/users/unstoppableayush"
+    const xhr = new XMLHttpRequest()
+     xhr.open('GET', reqURL )
+    //continious change
+    xhr.onreadystatechange = function(){
+        console.log(xhr.readyState)
+        if(xhr.readyState === 4){
+            // console.log(this.responseText)
+            const data = JSON.parse(this.responseText)
+            // console.log(data) //by defualt string
+            console.log("Followers",data.followers)
+        }
+    }
+    console.log(xhr.readyState)
+    xhr.send()
+    </script>
+</body>
+</html>
